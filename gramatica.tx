@@ -1,0 +1,29 @@
+Dominio:
+	'area de trabajo' name=ID 'define' 
+		variable+=Variable
+		sentencia*=Sentencia
+		reglas*=Regla
+	'fin'
+;
+
+Variable:
+	'variable' name=ID 
+;
+
+Sentencia:
+	variable=[Variable] hecho+=Hecho
+;
+
+Hecho:
+	('para'|'es'|'en') estado+=Estado
+;
+
+Estado:
+	/[0-9]+.[0-9]+/ | INT | STRING
+;
+
+Regla:
+	'regla' name=ID 
+;
+
+

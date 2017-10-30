@@ -1,0 +1,42 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+140647565330320 -> 140647565475216 [label="variable:0" arrowtail=diamond dir=both]
+140647565475216[label="{cantidadEstudiantes:Variable|}"]
+140647565330320 -> 140647564246864 [label="sentencia:0" arrowtail=diamond dir=both]
+140647564246864 -> 140647565475216 [label="variable" ]
+140647564246864 -> 140647564245008 [label="hecho:0" arrowtail=diamond dir=both]
+140647564245008[label="{:Hecho|+estado:list=['posgrado']\l}"]
+140647564246864 -> 140647564246928 [label="hecho:1" arrowtail=diamond dir=both]
+140647564246928[label="{:Hecho|+estado:list=[12]\l}"]
+140647564246864 -> 140647564246992 [label="hecho:2" arrowtail=diamond dir=both]
+140647564246992[label="{:Hecho|+estado:list=['2018']\l}"]
+140647564246864 -> 140647564316752 [label="hecho:3" arrowtail=diamond dir=both]
+140647564316752[label="{:Hecho|+estado:list=['articulo 38']\l}"]
+140647564246864 -> 140647564316816 [label="hecho:4" arrowtail=diamond dir=both]
+140647564316816[label="{:Hecho|+estado:list=['universidad distrital']\l}"]
+140647564246864[label="{:Sentencia|}"]
+140647565330320 -> 140647564243536 [label="sentencia:1" arrowtail=diamond dir=both]
+140647564243536 -> 140647565475216 [label="variable" ]
+140647564243536 -> 140647564317008 [label="hecho:0" arrowtail=diamond dir=both]
+140647564317008[label="{:Hecho|+estado:list=['pregrado']\l}"]
+140647564243536 -> 140647564317072 [label="hecho:1" arrowtail=diamond dir=both]
+140647564317072[label="{:Hecho|+estado:list=[1]\l}"]
+140647564243536 -> 140647564317136 [label="hecho:2" arrowtail=diamond dir=both]
+140647564317136[label="{:Hecho|+estado:list=['2018']\l}"]
+140647564243536[label="{:Sentencia|}"]
+140647565330320 -> 140647564243088 [label="reglas:0" arrowtail=diamond dir=both]
+140647564243088[label="{carlos:Regla|}"]
+140647565330320[label="{Polux:Dominio|}"]
+
+}

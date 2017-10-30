@@ -1,0 +1,55 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+28642080 -> 28636160[headlabel="variable "]
+28642080 -> 28648784[arrowtail=diamond, dir=both, headlabel="hecho 1..*"]
+28642080[ label="{Sentencia|}"]
+
+28624128 -> 28636160[arrowtail=diamond, dir=both, headlabel="variable 1..*"]
+28624128 -> 28642080[arrowtail=diamond, dir=both, headlabel="sentencia 0..*"]
+28624128 -> 28662064[arrowtail=diamond, dir=both, headlabel="reglas 0..*"]
+28624128[ label="{Dominio|+name:ID\l}"]
+
+28662064[ label="{Regla|+name:ID\l}"]
+
+28648784[ label="{Hecho|+estado:list[Estado]\l}"]
+
+28636160[ label="{Variable|+name:ID\l}"]
+
+28657056[ label="{Estado|[0-9]+.[0-9]+\|INT\|STRING}"]
+
+28205184[ label="{*OBJECT|}"]
+28205184 -> 28202400 [dir=back]
+
+28187696[ label="{STRING|}"]
+
+28202400[ label="{BASETYPE|}"]
+28202400 -> 28198832 [dir=back]
+28202400 -> 28190480 [dir=back]
+28202400 -> 28184912 [dir=back]
+28202400 -> 28187696 [dir=back]
+
+28193264[ label="{INT|}"]
+
+28196048[ label="{FLOAT|}"]
+
+28198832[ label="{NUMBER|}"]
+28198832 -> 28196048 [dir=back]
+28198832 -> 28193264 [dir=back]
+
+28190480[ label="{BOOL|}"]
+
+28184912[ label="{ID|}"]
+
+
+}
