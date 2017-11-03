@@ -11,45 +11,50 @@
     edge[dir=black,arrowtail=empty]
 
 
-28642080 -> 28636160[headlabel="variable "]
-28642080 -> 28648784[arrowtail=diamond, dir=both, headlabel="hecho 1..*"]
-28642080[ label="{Sentencia|}"]
+40116048[ label="{Regla|+name:ID\l}"]
 
-28624128 -> 28636160[arrowtail=diamond, dir=both, headlabel="variable 1..*"]
-28624128 -> 28642080[arrowtail=diamond, dir=both, headlabel="sentencia 0..*"]
-28624128 -> 28662064[arrowtail=diamond, dir=both, headlabel="reglas 0..*"]
-28624128[ label="{Dominio|+name:ID\l}"]
+40013904 -> 40077936[arrowtail=diamond, dir=both, headlabel="predicados 0..*"]
+40013904 -> 40116048[arrowtail=diamond, dir=both, headlabel="reglas 0..*"]
+40013904[ label="{Dominio|+articulo:Articulo\l+nombre:list[Nombre]\l}"]
 
-28662064[ label="{Regla|+name:ID\l}"]
+40091184[ label="{Hecho|+estado:list[Estado]\l}"]
 
-28648784[ label="{Hecho|+estado:list[Estado]\l}"]
+40077936 -> 40067952[arrowtail=diamond, dir=both, headlabel="variable "]
+40077936 -> 40091184[arrowtail=diamond, dir=both, headlabel="hecho 1..*"]
+40077936[ label="{Predicado|}"]
 
-28636160[ label="{Variable|+name:ID\l}"]
+40046688[ label="{Articulo|el\|la\|los\|las\|un\|unos\|una\|unas}"]
 
-28657056[ label="{Estado|[0-9]+.[0-9]+\|INT\|STRING}"]
+40032816[ label="{Palabra|define que}"]
 
-28205184[ label="{*OBJECT|}"]
-28205184 -> 28202400 [dir=back]
+40067952[ label="{Variable|+articulo:Articulo\l+name:STRING\l}"]
 
-28187696[ label="{STRING|}"]
+40037360[ label="{Nombre| [a-zA-Z0-9]+}"]
 
-28202400[ label="{BASETYPE|}"]
-28202400 -> 28198832 [dir=back]
-28202400 -> 28190480 [dir=back]
-28202400 -> 28184912 [dir=back]
-28202400 -> 28187696 [dir=back]
+40109680[ label="{Estado|[0-9]+.[0-9]+\|INT\|STRING}"]
 
-28193264[ label="{INT|}"]
+39502288[ label="{*OBJECT|}"]
+39502288 -> 39498336 [dir=back]
 
-28196048[ label="{FLOAT|}"]
+39478080[ label="{STRING|}"]
 
-28198832[ label="{NUMBER|}"]
-28198832 -> 28196048 [dir=back]
-28198832 -> 28193264 [dir=back]
+39498336[ label="{BASETYPE|}"]
+39498336 -> 39493600 [dir=back]
+39498336 -> 39481744 [dir=back]
+39498336 -> 39465696 [dir=back]
+39498336 -> 39478080 [dir=back]
 
-28190480[ label="{BOOL|}"]
+39485696[ label="{INT|}"]
 
-28184912[ label="{ID|}"]
+39489648[ label="{FLOAT|}"]
+
+39493600[ label="{NUMBER|}"]
+39493600 -> 39489648 [dir=back]
+39493600 -> 39485696 [dir=back]
+
+39481744[ label="{BOOL|}"]
+
+39465696[ label="{ID|}"]
 
 
 }

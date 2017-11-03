@@ -1,17 +1,27 @@
 Dominio:
-	'area de trabajo' name=ID 'define' 
-		variable+=Variable
-		sentencia*=Sentencia
+	articulo=Articulo nombre+=Nombre[eolterm] 'define que'
+		predicados*=Predicado
 		reglas*=Regla
-	'fin'
+;
+
+Palabra:
+	'define que'
+;
+
+Nombre:
+	!Palabra /[a-zA-Z0-9]+/
+;
+
+Articulo:
+		'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'
 ;
 
 Variable:
-	'variable' name=ID 
+	articulo=Articulo name=STRING
 ;
 
-Sentencia:
-	variable=[Variable] hecho+=Hecho
+Predicado:
+	variable=Variable hecho+=Hecho
 ;
 
 Hecho:
@@ -23,7 +33,5 @@ Estado:
 ;
 
 Regla:
-	'regla' name=ID 
+	'regla' name=ID
 ;
-
-

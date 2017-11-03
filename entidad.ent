@@ -1,7 +1,4 @@
-area de trabajo Polux define
-	variable cantidadEstudiantes
-	cantidadEstudiantes para 'posgrado' es 12 en 2018 en 'articulo 38' en 'universidad distrital'
-	cantidadEstudiantes para 'pregrado' es 1 en 2018
-	regla carlos 
-
-fin
+el juan sebbastian define piedrahita define que
+		la 'cantidad de estudiantes' para 'posgrado' es 12 en 2018 en 'articulo 38' en 'universidad distrital'
+		la 'clase de victorugo' para 'hoy'
+	regla carlos
