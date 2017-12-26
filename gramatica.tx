@@ -1,29 +1,38 @@
-Dominio:
-	'area de trabajo' name=ID 'define' 
-		variable+=Variable
-		sentencia*=Sentencia
-		reglas*=Regla
-	'fin'
+Domain:
+	article=Article domain+=STRING 'define que'
+		predicates*=Predicate
+		rules*=Rule
+;
+
+Keywords:
+	'define que'|'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'|'para'|'es'|'en'
+;
+
+Article:
+		'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'
 ;
 
 Variable:
-	'variable' name=ID 
+	article=Article name=STRING
 ;
 
-Sentencia:
-	variable=[Variable] hecho+=Hecho
+Predicate:
+	variable=Variable fact*=Fact finalFact=FinalFact
 ;
 
-Hecho:
-	('para'|'es'|'en') estado+=Estado
+Fact:
+	('para'|'en') state=State
 ;
 
-Estado:
-	/[0-9]+.[0-9]+/ | INT | STRING
+FinalFact:
+	'es' state=State
 ;
 
-Regla:
-	'regla' name=ID 
+State:
+	/[0-9]+.[0-9]+/ | INT | STRING | /[a-zA-z]+/
 ;
 
+Rule:
+	'regla' name=ID
+;
 

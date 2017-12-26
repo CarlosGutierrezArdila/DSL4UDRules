@@ -1,7 +1,6 @@
-area de trabajo Polux define
-	variable cantidadEstudiantes
-	cantidadEstudiantes para 'posgrado' es 12 en 2018 en 'articulo 38' en 'universidad distrital'
-	cantidadEstudiantes para 'pregrado' es 1 en 2018
-	regla carlos 
-
-fin
+el 'modelo de polux' define que
+		la 'cantidad de estudiantes' para 'posgrado' en 'Universidad Distrital' es 12
+		la 'cantidad de estudiantes' para 'pregrado' en 'Universidad Distrital' es 12.12 
+		la 'cantidad de estudiantes' para 'pregrado' en 'Universidad Distrital' es uno
+		la 'cantidad de estudiantes' para 'pregrado' en 'Universidad Distrital' es 'uno' 
+		regla carlos
