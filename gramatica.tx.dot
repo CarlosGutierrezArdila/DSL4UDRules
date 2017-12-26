@@ -11,45 +11,45 @@
     edge[dir=black,arrowtail=empty]
 
 
-28642080 -> 28636160[headlabel="variable "]
-28642080 -> 28648784[arrowtail=diamond, dir=both, headlabel="hecho 1..*"]
-28642080[ label="{Sentencia|}"]
+94542106913880 -> 94542106897272[arrowtail=diamond, dir=both, headlabel="variable 1..*"]
+94542106913880 -> 94542107100456[arrowtail=diamond, dir=both, headlabel="sentencia 0..*"]
+94542106913880 -> 94542107109528[arrowtail=diamond, dir=both, headlabel="reglas 0..*"]
+94542106913880[ label="{Dominio|+name:ID\l}"]
 
-28624128 -> 28636160[arrowtail=diamond, dir=both, headlabel="variable 1..*"]
-28624128 -> 28642080[arrowtail=diamond, dir=both, headlabel="sentencia 0..*"]
-28624128 -> 28662064[arrowtail=diamond, dir=both, headlabel="reglas 0..*"]
-28624128[ label="{Dominio|+name:ID\l}"]
+94542106897272[ label="{Variable|+name:ID\l}"]
 
-28662064[ label="{Regla|+name:ID\l}"]
+94542107100456 -> 94542106897272[headlabel="variable "]
+94542107100456 -> 94542107105992[arrowtail=diamond, dir=both, headlabel="hecho 1..*"]
+94542107100456[ label="{Sentencia|}"]
 
-28648784[ label="{Hecho|+estado:list[Estado]\l}"]
+94542107105992[ label="{Hecho|+estado:list[Estado]\l}"]
 
-28636160[ label="{Variable|+name:ID\l}"]
+94542107111528[ label="{Estado|[0-9]+.[0-9]+\|INT\|STRING}"]
 
-28657056[ label="{Estado|[0-9]+.[0-9]+\|INT\|STRING}"]
+94542107109528[ label="{Regla|+name:ID\l}"]
 
-28205184[ label="{*OBJECT|}"]
-28205184 -> 28202400 [dir=back]
+94542106878408[ label="{ID|}"]
 
-28187696[ label="{STRING|}"]
+94542106899272[ label="{STRING|}"]
 
-28202400[ label="{BASETYPE|}"]
-28202400 -> 28198832 [dir=back]
-28202400 -> 28190480 [dir=back]
-28202400 -> 28184912 [dir=back]
-28202400 -> 28187696 [dir=back]
+94542106904808[ label="{BOOL|}"]
 
-28193264[ label="{INT|}"]
+94542106910344[ label="{INT|}"]
 
-28196048[ label="{FLOAT|}"]
+94542106915880[ label="{FLOAT|}"]
 
-28198832[ label="{NUMBER|}"]
-28198832 -> 28196048 [dir=back]
-28198832 -> 28193264 [dir=back]
+94542106921416[ label="{NUMBER|}"]
+94542106921416 -> 94542106915880 [dir=back]
+94542106921416 -> 94542106910344 [dir=back]
 
-28190480[ label="{BOOL|}"]
+94542106926952[ label="{BASETYPE|}"]
+94542106926952 -> 94542106921416 [dir=back]
+94542106926952 -> 94542106904808 [dir=back]
+94542106926952 -> 94542106878408 [dir=back]
+94542106926952 -> 94542106899272 [dir=back]
 
-28184912[ label="{ID|}"]
+94542106933080[ label="{*OBJECT|}"]
+94542106933080 -> 94542106926952 [dir=back]
 
 
 }
