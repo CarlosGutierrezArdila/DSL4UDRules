@@ -5,7 +5,7 @@ Domain:
 ;
 
 Keywords:
-	'define que'|'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'|'para'|'es'|'en'
+	'define que'|Article|'para'|'es'|'en'
 ;
 
 Article:
