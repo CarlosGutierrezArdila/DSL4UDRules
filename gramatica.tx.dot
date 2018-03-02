@@ -11,51 +11,67 @@
     edge[dir=black,arrowtail=empty]
 
 
-94788924833448 -> 94788925039864[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
-94788924833448 -> 94788925070216[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
-94788924833448[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
+94723862270304 -> 94723862489936[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
+94723862270304 -> 94723862582000[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
+94723862270304[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
 
-94788924816840[ label="{Keywords|define que\|el\|la\|los\|las\|un\|unos\|una\|unas\|para\|es\|en}"]
+94723862542368 -> 94723862282912[arrowtail=diamond, dir=both, headlabel="variable1 "]
+94723862542368[ label="{Comparation|+operador:Operators\l+variable2:State\l}"]
 
-94788925029976[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
+94723862554416[ label="{LogicalOperators|y\|o}"]
 
-94788925034920[ label="{Variable|+article:Article\l+name:STRING\l}"]
+94723862530816[ label="{Operators|mayor que\|menor que\|mayor o igual que\|menor o igual que\|igual que\|diferente que}"]
 
-94788925039864 -> 94788925034920[arrowtail=diamond, dir=both, headlabel="variable "]
-94788925039864 -> 94788925044808[arrowtail=diamond, dir=both, headlabel="fact 0..*"]
-94788925039864 -> 94788922837000[arrowtail=diamond, dir=both, headlabel="finalFact "]
-94788925039864[ label="{Predicate|}"]
+94723862572240 -> 94723862542368[arrowtail=diamond, dir=both, headlabel="comparacion "]
+94723862572240 -> 94723862562544[arrowtail=diamond, dir=both, headlabel="otrasComparaciones 0..*"]
+94723862572240[ label="{Comparations|}"]
 
-94788925044808[ label="{Fact|+state:State\l}"]
+94723862489936 -> 94723862282912[arrowtail=diamond, dir=both, headlabel="variable "]
+94723862489936 -> 94723862501200[arrowtail=diamond, dir=both, headlabel="fact 0..*"]
+94723862489936 -> 94723862512464[arrowtail=diamond, dir=both, headlabel="finalFact "]
+94723862489936[ label="{Predicate|}"]
 
-94788922837000[ label="{FinalFact|+state:State\l}"]
+94723862582000 -> 94723862572240[arrowtail=diamond, dir=both, headlabel="comparaciones "]
+94723862582000 -> 94723862282912[arrowtail=diamond, dir=both, headlabel="variable "]
+94723862582000[ label="{Rule|+conclusion:State\l}"]
 
-94788922841944[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+}"]
+94723862282912[ label="{Variable|+article:Article\l+state:State\l}"]
 
-94788925070216[ label="{Rule|+name:ID\l}"]
+94723862521376[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
 
-94788924796440[ label="{ID|}"]
+94723862462160[ label="{Keywords|define que\|para\|es\|en}"]
 
-94788924818840[ label="{STRING|}"]
+94723862472080[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
 
-94788924824376[ label="{BOOL|}"]
+94723862512464[ label="{FinalFact|+state:State\l}"]
 
-94788924829912[ label="{INT|}"]
+94723862562544 -> 94723862542368[arrowtail=diamond, dir=both, headlabel="otraComparacion "]
+94723862562544[ label="{OtherComparation|+operadorLogico:LogicalOperators\l}"]
 
-94788924835448[ label="{FLOAT|}"]
+94723862501200[ label="{Fact|+state:State\l}"]
 
-94788924840984[ label="{NUMBER|}"]
-94788924840984 -> 94788924835448 [dir=back]
-94788924840984 -> 94788924829912 [dir=back]
+94723862289920[ label="{*OBJECT|}"]
+94723862289920 -> 94723862284928 [dir=back]
 
-94788924846520[ label="{BASETYPE|}"]
-94788924846520 -> 94788924840984 [dir=back]
-94788924846520 -> 94788924824376 [dir=back]
-94788924846520 -> 94788924796440 [dir=back]
-94788924846520 -> 94788924818840 [dir=back]
+94723861913680[ label="{STRING|}"]
 
-94788924852648[ label="{*OBJECT|}"]
-94788924852648 -> 94788924846520 [dir=back]
+94723862284928[ label="{BASETYPE|}"]
+94723862284928 -> 94723862279936 [dir=back]
+94723862284928 -> 94723862271360 [dir=back]
+94723862284928 -> 94723862239104 [dir=back]
+94723862284928 -> 94723861913680 [dir=back]
+
+94723862277136[ label="{INT|}"]
+
+94723861911664[ label="{FLOAT|}"]
+
+94723862279936[ label="{NUMBER|}"]
+94723862279936 -> 94723861911664 [dir=back]
+94723862279936 -> 94723862277136 [dir=back]
+
+94723862271360[ label="{BOOL|}"]
+
+94723862239104[ label="{ID|}"]
 
 
 }

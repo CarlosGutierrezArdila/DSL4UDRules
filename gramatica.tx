@@ -5,15 +5,15 @@ Domain:
 ;
 
 Keywords:
-	'define que'|Article|'para'|'es'|'en'
+	'define que'|Article|'para'|'es'|'en'|Operators
 ;
 
 Article:
-		'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'
+	'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'
 ;
 
 Variable:
-	article=Article name=STRING
+	article=Article state=State
 ;
 
 Predicate:
@@ -29,10 +29,30 @@ FinalFact:
 ;
 
 State:
-	/[0-9]+.[0-9]+/ | INT | STRING | /[a-zA-z]+/
+	/[0-9]+.[0-9]+/ | INT| STRING | /[a-zA-z]+/ |ID
+;
+
+Operators:
+	'mayor que'|'menor que'|'mayor o igual que'|'menor o igual que'|'igual que'|'diferente que'
+;
+
+Comparation:
+	variable1=Variable 'es' operador=Operators variable2=State
+;
+
+LogicalOperators:
+	'y'|'o'
+;
+
+OtherComparation:
+	operadorLogico=LogicalOperators otraComparacion=Comparation
+;
+
+Comparations:
+	comparacion=Comparation otrasComparaciones*=OtherComparation
 ;
 
 Rule:
-	'regla' name=ID
+	 'si' comparaciones=Comparations 'entonces' variable=Variable 'es' conclusion=State
 ;
 

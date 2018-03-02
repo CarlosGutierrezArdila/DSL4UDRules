@@ -1,6 +1,4 @@
-el 'modelo de polux' define que
-		la 'cantidad de estudiantes' para 'posgrado' en 'Universidad Distrital' es 12
-		la 'cantidad de estudiantes' para 'pregrado' en 'Universidad Distrital' es 12.12 
-		la 'cantidad de estudiantes' para 'pregrado' en 'Universidad Distrital' es uno
-		la 'cantidad de estudiantes' para 'pregrado' en 'Universidad Distrital' es 'uno' 
-		regla carlos
+el 'articulo 38' define que el 'promedio' para 'modalidad de posgrado' en 'Universidad Distrital' en 'pregrado' es 3.8 
+el 'porcentaje cursado necesario' para 'modalidad de posgrado' en 'Universidad Distrital' en 'pregrado' es 80
+si el 'promedio' es mayor que 3.8 y el 'porcentaje cursado' es mayor o igual que 80 entonces la 'posible modalidad de grado' es posgrado
+
