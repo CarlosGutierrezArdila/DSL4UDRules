@@ -1,0 +1,2 @@
+# Template for facts
+{{dominio.predicates[0].variable.state}}({%for fact in dominio.predicates[0].facts %} 	{{fact.state}},{% endfor %} {{dominio.predicates[0].finalFact.state}}).

@@ -11,67 +11,67 @@
     edge[dir=black,arrowtail=empty]
 
 
-94723862270304 -> 94723862489936[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
-94723862270304 -> 94723862582000[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
-94723862270304[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
+140062235832 -> 140062504456[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
+140062235832 -> 140062547880[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
+140062235832[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
 
-94723862542368 -> 94723862282912[arrowtail=diamond, dir=both, headlabel="variable1 "]
-94723862542368[ label="{Comparation|+operador:Operators\l+variable2:State\l}"]
+140062219224[ label="{Keywords|define que\|para\|es\|en}"]
 
-94723862554416[ label="{LogicalOperators|y\|o}"]
+140062494568[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
 
-94723862530816[ label="{Operators|mayor que\|menor que\|mayor o igual que\|menor o igual que\|igual que\|diferente que}"]
+140062499512[ label="{Variable|+article:Article\l+state:State\l}"]
 
-94723862572240 -> 94723862542368[arrowtail=diamond, dir=both, headlabel="comparacion "]
-94723862572240 -> 94723862562544[arrowtail=diamond, dir=both, headlabel="otrasComparaciones 0..*"]
-94723862572240[ label="{Comparations|}"]
+140062504456 -> 140062499512[arrowtail=diamond, dir=both, headlabel="variable "]
+140062504456 -> 140062509400[arrowtail=diamond, dir=both, headlabel="fact 0..*"]
+140062504456 -> 140060279736[arrowtail=diamond, dir=both, headlabel="finalFact "]
+140062504456[ label="{Predicate|}"]
 
-94723862489936 -> 94723862282912[arrowtail=diamond, dir=both, headlabel="variable "]
-94723862489936 -> 94723862501200[arrowtail=diamond, dir=both, headlabel="fact 0..*"]
-94723862489936 -> 94723862512464[arrowtail=diamond, dir=both, headlabel="finalFact "]
-94723862489936[ label="{Predicate|}"]
+140062509400[ label="{Fact|+state:State\l}"]
 
-94723862582000 -> 94723862572240[arrowtail=diamond, dir=both, headlabel="comparaciones "]
-94723862582000 -> 94723862282912[arrowtail=diamond, dir=both, headlabel="variable "]
-94723862582000[ label="{Rule|+conclusion:State\l}"]
+140060279736[ label="{FinalFact|+state:State\l}"]
 
-94723862282912[ label="{Variable|+article:Article\l+state:State\l}"]
+140060284680[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
 
-94723862521376[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
+140062512344[ label="{Operators|mayor que\|menor que\|mayor o igual que\|menor o igual que\|igual que\|diferente que}"]
 
-94723862462160[ label="{Keywords|define que\|para\|es\|en}"]
+140062497512 -> 140062499512[arrowtail=diamond, dir=both, headlabel="variable1 "]
+140062497512[ label="{Comparation|+operador:Operators\l+variable2:State\l}"]
 
-94723862472080[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
+140062286952[ label="{LogicalOperators|y\|o}"]
 
-94723862512464[ label="{FinalFact|+state:State\l}"]
+140062536808 -> 140062497512[arrowtail=diamond, dir=both, headlabel="otraComparacion "]
+140062536808[ label="{OtherComparation|+operadorLogico:LogicalOperators\l}"]
 
-94723862562544 -> 94723862542368[arrowtail=diamond, dir=both, headlabel="otraComparacion "]
-94723862562544[ label="{OtherComparation|+operadorLogico:LogicalOperators\l}"]
+140062542344 -> 140062497512[arrowtail=diamond, dir=both, headlabel="comparacion "]
+140062542344 -> 140062536808[arrowtail=diamond, dir=both, headlabel="otrasComparaciones 0..*"]
+140062542344[ label="{Comparations|}"]
 
-94723862501200[ label="{Fact|+state:State\l}"]
+140062547880 -> 140062542344[arrowtail=diamond, dir=both, headlabel="comparaciones "]
+140062547880 -> 140062499512[arrowtail=diamond, dir=both, headlabel="variable "]
+140062547880[ label="{Rule|+conclusion:State\l}"]
 
-94723862289920[ label="{*OBJECT|}"]
-94723862289920 -> 94723862284928 [dir=back]
+140062215688[ label="{ID|}"]
 
-94723861913680[ label="{STRING|}"]
+140062221224[ label="{STRING|}"]
 
-94723862284928[ label="{BASETYPE|}"]
-94723862284928 -> 94723862279936 [dir=back]
-94723862284928 -> 94723862271360 [dir=back]
-94723862284928 -> 94723862239104 [dir=back]
-94723862284928 -> 94723861913680 [dir=back]
+140062226760[ label="{BOOL|}"]
 
-94723862277136[ label="{INT|}"]
+140062232296[ label="{INT|}"]
 
-94723861911664[ label="{FLOAT|}"]
+140062237832[ label="{FLOAT|}"]
 
-94723862279936[ label="{NUMBER|}"]
-94723862279936 -> 94723861911664 [dir=back]
-94723862279936 -> 94723862277136 [dir=back]
+140062288952[ label="{NUMBER|}"]
+140062288952 -> 140062237832 [dir=back]
+140062288952 -> 140062232296 [dir=back]
 
-94723862271360[ label="{BOOL|}"]
+140062293896[ label="{BASETYPE|}"]
+140062293896 -> 140062288952 [dir=back]
+140062293896 -> 140062226760 [dir=back]
+140062293896 -> 140062215688 [dir=back]
+140062293896 -> 140062221224 [dir=back]
 
-94723862239104[ label="{ID|}"]
+140062300024[ label="{*OBJECT|}"]
+140062300024 -> 140062293896 [dir=back]
 
 
 }
