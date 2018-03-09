@@ -11,67 +11,67 @@
     edge[dir=black,arrowtail=empty]
 
 
-140062235832 -> 140062504456[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
-140062235832 -> 140062547880[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
-140062235832[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
+94102247554256 -> 94102247777376[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
+94102247554256 -> 94102247869696[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
+94102247554256[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
 
-140062219224[ label="{Keywords|define que\|para\|es\|en}"]
+94102247829808 -> 94102247566864[arrowtail=diamond, dir=both, headlabel="variable1 "]
+94102247829808[ label="{Comparation|+operador:Operators\l+variable2:State\l}"]
 
-140062494568[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
+94102247841856[ label="{LogicalOperators|y\|o}"]
 
-140062499512[ label="{Variable|+article:Article\l+state:State\l}"]
+94102247818256[ label="{Operators|mayor que\|menor que\|mayor o igual que\|menor o igual que\|igual que\|diferente que}"]
 
-140062504456 -> 140062499512[arrowtail=diamond, dir=both, headlabel="variable "]
-140062504456 -> 140062509400[arrowtail=diamond, dir=both, headlabel="fact 0..*"]
-140062504456 -> 140060279736[arrowtail=diamond, dir=both, headlabel="finalFact "]
-140062504456[ label="{Predicate|}"]
+94102247859776 -> 94102247829808[arrowtail=diamond, dir=both, headlabel="comparacion "]
+94102247859776 -> 94102247849984[arrowtail=diamond, dir=both, headlabel="otrasComparaciones 0..*"]
+94102247859776[ label="{Comparations|}"]
 
-140062509400[ label="{Fact|+state:State\l}"]
+94102247777376 -> 94102247566864[arrowtail=diamond, dir=both, headlabel="variable "]
+94102247777376 -> 94102247788640[arrowtail=diamond, dir=both, headlabel="facts 0..*"]
+94102247777376 -> 94102247799904[arrowtail=diamond, dir=both, headlabel="finalFact "]
+94102247777376[ label="{Predicate|}"]
 
-140060279736[ label="{FinalFact|+state:State\l}"]
+94102247869696 -> 94102247859776[arrowtail=diamond, dir=both, headlabel="comparaciones "]
+94102247869696 -> 94102247566864[arrowtail=diamond, dir=both, headlabel="variable "]
+94102247869696[ label="{Rule|+conclusion:State\l}"]
 
-140060284680[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
+94102247566864[ label="{Variable|+article:Article\l+state:State\l}"]
 
-140062512344[ label="{Operators|mayor que\|menor que\|mayor o igual que\|menor o igual que\|igual que\|diferente que}"]
+94102247808816[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
 
-140062497512 -> 140062499512[arrowtail=diamond, dir=both, headlabel="variable1 "]
-140062497512[ label="{Comparation|+operador:Operators\l+variable2:State\l}"]
+94102247750160[ label="{Keywords|define que\|para\|es\|en}"]
 
-140062286952[ label="{LogicalOperators|y\|o}"]
+94102247760080[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
 
-140062536808 -> 140062497512[arrowtail=diamond, dir=both, headlabel="otraComparacion "]
-140062536808[ label="{OtherComparation|+operadorLogico:LogicalOperators\l}"]
+94102247799904[ label="{FinalFact|+state:State\l}"]
 
-140062542344 -> 140062497512[arrowtail=diamond, dir=both, headlabel="comparacion "]
-140062542344 -> 140062536808[arrowtail=diamond, dir=both, headlabel="otrasComparaciones 0..*"]
-140062542344[ label="{Comparations|}"]
+94102247849984 -> 94102247829808[arrowtail=diamond, dir=both, headlabel="otraComparacion "]
+94102247849984[ label="{OtherComparation|+operadorLogico:LogicalOperators\l}"]
 
-140062547880 -> 140062542344[arrowtail=diamond, dir=both, headlabel="comparaciones "]
-140062547880 -> 140062499512[arrowtail=diamond, dir=both, headlabel="variable "]
-140062547880[ label="{Rule|+conclusion:State\l}"]
+94102247788640[ label="{Fact|+state:State\l}"]
 
-140062215688[ label="{ID|}"]
+94102247573872[ label="{*OBJECT|}"]
+94102247573872 -> 94102247568880 [dir=back]
 
-140062221224[ label="{STRING|}"]
+94102247203456[ label="{STRING|}"]
 
-140062226760[ label="{BOOL|}"]
+94102247568880[ label="{BASETYPE|}"]
+94102247568880 -> 94102247563888 [dir=back]
+94102247568880 -> 94102247555312 [dir=back]
+94102247568880 -> 94102247523488 [dir=back]
+94102247568880 -> 94102247203456 [dir=back]
 
-140062232296[ label="{INT|}"]
+94102247561088[ label="{INT|}"]
 
-140062237832[ label="{FLOAT|}"]
+94102247201440[ label="{FLOAT|}"]
 
-140062288952[ label="{NUMBER|}"]
-140062288952 -> 140062237832 [dir=back]
-140062288952 -> 140062232296 [dir=back]
+94102247563888[ label="{NUMBER|}"]
+94102247563888 -> 94102247201440 [dir=back]
+94102247563888 -> 94102247561088 [dir=back]
 
-140062293896[ label="{BASETYPE|}"]
-140062293896 -> 140062288952 [dir=back]
-140062293896 -> 140062226760 [dir=back]
-140062293896 -> 140062215688 [dir=back]
-140062293896 -> 140062221224 [dir=back]
+94102247555312[ label="{BOOL|}"]
 
-140062300024[ label="{*OBJECT|}"]
-140062300024 -> 140062293896 [dir=back]
+94102247523488[ label="{ID|}"]
 
 
 }
