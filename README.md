@@ -17,6 +17,6 @@ to check and visualize (generate dot file) the meta-model or meta-model model:
 convert dot to png
     - dot -Tpng dotfile.dot -o outputfile.png
 
-to prove install go
+to test install go
 
 
