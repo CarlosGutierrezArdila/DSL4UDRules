@@ -1,0 +1,24 @@
+# Template for facts
+{%for predicate in dominio.predicates%}
+	{{- clearSpace(predicate.variable.state)-}}
+	({%- for fact in predicate.facts -%}
+		{{clearSpace(fact.state)}},
+	{%- endfor %} 
+	{{-clearSpace(predicate.finalFact.state)}}).
+{% endfor %}
+
+#Template for rules
+{% for rule in dominio.rules %}
+	{{- clearSpace(rule.variable.state) -}}(A,
+	{{-clearSpace(rule.comparations.comparation.variable1.state)-}}
+	{%- for otherComparation in rule.comparations.otherComparation -%}
+		,{{- clearSpace(otherComparation.otherComparation.variable1.state)-}}
+	{%- endfor -%}
+	):=
+	{{-clearSpace(rule.comparations.comparation.variable1.state)-}}{{-gologOperator(rule.comparations.comparation.operator)-}}{{-clearSpace(rule.comparations.comparation.variable2)-}}
+	{%- for otherComparation in rule.comparations.otherComparation -%}
+		{{gologOperator(otherComparation.logicalOperator)}}{{- clearSpace(otherComparation.otherComparation.variable1.state) }}{{gologOperator(otherComparation.otherComparation.operator)}}{{otherComparation.otherComparation.variable2-}}
+	{%- endfor -%}
+	->A={{clearSpace(rule.conclusion)}}.
+{% endfor %}
+

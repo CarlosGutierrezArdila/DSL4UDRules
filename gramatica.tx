@@ -37,7 +37,7 @@ Operators:
 ;
 
 Comparation:
-	variable1=Variable 'es' operador=Operators variable2=State
+	variable1=Variable 'es' operator=Operators variable2=State
 ;
 
 LogicalOperators:
@@ -45,14 +45,14 @@ LogicalOperators:
 ;
 
 OtherComparation:
-	operadorLogico=LogicalOperators otraComparacion=Comparation
+	logicalOperator=LogicalOperators otherComparation=Comparation
 ;
 
 Comparations:
-	comparacion=Comparation otrasComparaciones*=OtherComparation
+	comparation=Comparation otherComparation*=OtherComparation
 ;
 
 Rule:
-	 'si' comparaciones=Comparations 'entonces' variable=Variable 'es' conclusion=State
+	 'si' comparations=Comparations 'entonces' variable=Variable 'es' conclusion=State
 ;
 
