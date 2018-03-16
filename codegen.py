@@ -7,12 +7,12 @@ def clearSpace(chain):
 
 def gologOperator(operator):
 	return {
-		'mayor o igual que':'>=',
-		'menor o igual que':'<=',
-		'mayor que':'>',
-		'menor que':'<',
-		'igual que':'==',
-		'diferente que':'!=',
+		'mayor o igual a':'@>=',
+		'menor o igual a':'@<=',
+		'mayor a':'@>',
+		'menor a':'@<',
+		'igual a':'==',
+		'diferente a':'\==',
 		'y':',',
 		'o':';'
 	}.get(operator, operator)

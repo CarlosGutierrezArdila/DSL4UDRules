@@ -1,4 +1,9 @@
 el 'articulo 38' define que el 'promedio' para 'modalidad de posgrado' en 'Universidad Distrital' en 'pregrado' es 3.8 
+el 'promedio' para 'modalidad de pasantia' en 'Universidad Distrital' en 'pregrado' es 3.8 
 el 'porcentaje cursado necesario' para 'modalidad de posgrado' en 'Universidad Distrital' en 'pregrado' es 80
-si el 'promedio' es mayor o igual que 3.8 y el 'porcentaje cursado' es mayor o igual que 80  entonces la 'posible modalidad de grado' es posgrado
+el 4 es natural
+si el 'promedio' es mayor o igual a 3.8 y el 'porcentaje cursado' es mayor o igual a 80  entonces la 'posible modalidad de grado' es posgrado
+si la nota es mayor o igual a 3 entonces la materia es aprobada
+la materia es aprobada si la nota es mayor o igual a 5	
+
 

@@ -10,15 +10,15 @@
 #Template for rules
 {% for rule in dominio.rules %}
 	{{- clearSpace(rule.variable.state) -}}(A,
-	{{-clearSpace(rule.comparations.comparation.variable1.state)-}}
+	{{- clearSpace(rule.comparations.comparation.variable1.state)|upper -}}
 	{%- for otherComparation in rule.comparations.otherComparation -%}
-		,{{- clearSpace(otherComparation.otherComparation.variable1.state)-}}
+		,{{- clearSpace(otherComparation.otherComparation.variable1.state)|upper -}}
 	{%- endfor -%}
-	):=
-	{{-clearSpace(rule.comparations.comparation.variable1.state)-}}{{-gologOperator(rule.comparations.comparation.operator)-}}{{-clearSpace(rule.comparations.comparation.variable2)-}}
+	):-
+	{{-clearSpace(rule.comparations.comparation.variable1.state)|upper-}}{{-gologOperator(rule.comparations.comparation.operator)-}}{{-clearSpace(rule.comparations.comparation.variable2)-}}
 	{%- for otherComparation in rule.comparations.otherComparation -%}
-		{{gologOperator(otherComparation.logicalOperator)}}{{- clearSpace(otherComparation.otherComparation.variable1.state) }}{{gologOperator(otherComparation.otherComparation.operator)}}{{otherComparation.otherComparation.variable2-}}
+		{{gologOperator(otherComparation.logicalOperator)}}{{- clearSpace(otherComparation.otherComparation.variable1.state)|upper }}{{gologOperator(otherComparation.otherComparation.operator)}}{{otherComparation.otherComparation.variable2-}}
 	{%- endfor -%}
-	->A={{clearSpace(rule.conclusion)}}.
+	,A={{clearSpace(rule.conclusion)}}.
 {% endfor %}
 

@@ -9,7 +9,7 @@ Keywords:
 ;
 
 Article:
-	'el'|'la'|'los'|'las'|'un'|'unos'|'una'|'unas'
+	'el'|'la'|'un'|'una'
 ;
 
 Variable:
@@ -33,7 +33,7 @@ State:
 ;
 
 Operators:
-	'mayor que'|'menor que'|'mayor o igual que'|'menor o igual que'|'igual que'|'diferente que'
+	'mayor a'|'menor a'|'mayor o igual a'|'menor o igual a'|'igual a'|'diferente a'
 ;
 
 Comparation:
@@ -53,6 +53,6 @@ Comparations:
 ;
 
 Rule:
-	 'si' comparations=Comparations 'entonces' variable=Variable 'es' conclusion=State
+	 ('si' comparations=Comparations 'entonces' variable=Variable 'es' conclusion=State) | (variable=Variable 'es' conclusion=State 'si' comparations=Comparations)
 ;
 
