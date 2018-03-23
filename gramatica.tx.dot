@@ -11,67 +11,67 @@
     edge[dir=black,arrowtail=empty]
 
 
-120561081528 -> 120561350152[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
-120561081528 -> 120561393576[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
-120561081528[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
+233749881224 -> 233750148664[arrowtail=diamond, dir=both, headlabel="predicates 0..*"]
+233749881224 -> 233750187608[arrowtail=diamond, dir=both, headlabel="rules 0..*"]
+233749881224[ label="{Domain|+article:Article\l+domain:list[STRING]\l}"]
 
-120561064920[ label="{Keywords|define que\|para\|es\|en}"]
+233749864616[ label="{Keywords|define que\|para\|es\|en}"]
 
-120561340264[ label="{Article|el\|la\|los\|las\|un\|unos\|una\|unas}"]
+233750138776[ label="{Article|el\|la\|un\|una}"]
 
-120561345208[ label="{Variable|+article:Article\l+state:State\l}"]
+233750143720[ label="{Variable|+article:Article\l+state:State\l}"]
 
-120561350152 -> 120561345208[arrowtail=diamond, dir=both, headlabel="variable "]
-120561350152 -> 120561355096[arrowtail=diamond, dir=both, headlabel="facts 0..*"]
-120561350152 -> 120559125432[arrowtail=diamond, dir=both, headlabel="finalFact "]
-120561350152[ label="{Predicate|}"]
+233750148664 -> 233750143720[arrowtail=diamond, dir=both, headlabel="variable "]
+233750148664 -> 233750153608[arrowtail=diamond, dir=both, headlabel="facts 0..*"]
+233750148664 -> 233747923896[arrowtail=diamond, dir=both, headlabel="finalFact "]
+233750148664[ label="{Predicate|}"]
 
-120561355096[ label="{Fact|+state:State\l}"]
+233750153608[ label="{Fact|+state:State\l}"]
 
-120559125432[ label="{FinalFact|+state:State\l}"]
+233747923896[ label="{FinalFact|+state:State\l}"]
 
-120559130376[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
+233747928840[ label="{State|[0-9]+.[0-9]+\|INT\|STRING\|[a-zA-z]+\|ID}"]
 
-120561358040[ label="{Operators|mayor a\|menor a\|mayor o igual a\|menor o igual a\|igual a\|diferente a}"]
+233750178072[ label="{Operators|mayor a\|menor a\|mayor o igual a\|menor o igual a\|igual a\|diferente a}"]
 
-120561343208 -> 120561345208[arrowtail=diamond, dir=both, headlabel="variable1 "]
-120561343208[ label="{Comparation|+operator:Operators\l+variable2:State\l}"]
+233750183016 -> 233750143720[arrowtail=diamond, dir=both, headlabel="variable1 "]
+233750183016[ label="{Comparation|+operator:Operators\l+variable2:State\l}"]
 
-120561132648[ label="{LogicalOperators|y\|o}"]
+233750146664[ label="{LogicalOperators|y\|o}"]
 
-120561382504 -> 120561343208[arrowtail=diamond, dir=both, headlabel="otherComparation "]
-120561382504[ label="{OtherComparation|+logicalOperator:LogicalOperators\l}"]
+233749870152 -> 233750183016[arrowtail=diamond, dir=both, headlabel="otherComparation "]
+233749870152[ label="{OtherComparation|+logicalOperator:LogicalOperators\l}"]
 
-120561388040 -> 120561343208[arrowtail=diamond, dir=both, headlabel="comparation "]
-120561388040 -> 120561382504[arrowtail=diamond, dir=both, headlabel="otherComparation 0..*"]
-120561388040[ label="{Comparations|}"]
+233750181016 -> 233750183016[arrowtail=diamond, dir=both, headlabel="comparation "]
+233750181016 -> 233749870152[arrowtail=diamond, dir=both, headlabel="otherComparation 0..*"]
+233750181016[ label="{Comparations|}"]
 
-120561393576 -> 120561388040[arrowtail=diamond, dir=both, headlabel="comparations "]
-120561393576 -> 120561345208[arrowtail=diamond, dir=both, headlabel="variable "]
-120561393576[ label="{Rule|+conclusion:State\l}"]
+233750187608 -> 233750181016[arrowtail=diamond, dir=both, headlabel="comparations "]
+233750187608 -> 233750143720[arrowtail=diamond, dir=both, headlabel="variable "]
+233750187608[ label="{Rule|+conclusion:State\l}"]
 
-120561061384[ label="{ID|}"]
+233749859848[ label="{ID|}"]
 
-120561066920[ label="{STRING|}"]
+233749866616[ label="{STRING|}"]
 
-120561072456[ label="{BOOL|}"]
+233749872152[ label="{BOOL|}"]
 
-120561077992[ label="{INT|}"]
+233749877688[ label="{INT|}"]
 
-120561083528[ label="{FLOAT|}"]
+233749883224[ label="{FLOAT|}"]
 
-120561134648[ label="{NUMBER|}"]
-120561134648 -> 120561083528 [dir=back]
-120561134648 -> 120561077992 [dir=back]
+233749934168[ label="{NUMBER|}"]
+233749934168 -> 233749883224 [dir=back]
+233749934168 -> 233749877688 [dir=back]
 
-120561139592[ label="{BASETYPE|}"]
-120561139592 -> 120561134648 [dir=back]
-120561139592 -> 120561072456 [dir=back]
-120561139592 -> 120561061384 [dir=back]
-120561139592 -> 120561066920 [dir=back]
+233749939704[ label="{BASETYPE|}"]
+233749939704 -> 233749934168 [dir=back]
+233749939704 -> 233749872152 [dir=back]
+233749939704 -> 233749859848 [dir=back]
+233749939704 -> 233749866616 [dir=back]
 
-120561145720[ label="{*OBJECT|}"]
-120561145720 -> 120561139592 [dir=back]
+233749945832[ label="{*OBJECT|}"]
+233749945832 -> 233749939704 [dir=back]
 
 
 }

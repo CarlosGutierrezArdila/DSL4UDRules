@@ -1,24 +1,49 @@
 # Template for facts
 {%for predicate in dominio.predicates%}
-	{{- clearSpace(predicate.variable.state)-}}
+	{{- predicate.variable.state|clearSpace-}}
 	({%- for fact in predicate.facts -%}
-		{{clearSpace(fact.state)}},
+		{{fact.state|clearSpace}},
 	{%- endfor %} 
-	{{-clearSpace(predicate.finalFact.state)}}).
+	{{-predicate.finalFact.state|clearSpace}}).
 {% endfor %}
 
 #Template for rules
 {% for rule in dominio.rules %}
-	{{- clearSpace(rule.variable.state) -}}(A,
-	{{- clearSpace(rule.comparations.comparation.variable1.state)|upper -}}
+	{{- rule.variable.state|clearSpace -}}(A,
+	{{- rule.comparations.comparation.variable1.state|clearSpace|upper -}}
 	{%- for otherComparation in rule.comparations.otherComparation -%}
-		,{{- clearSpace(otherComparation.otherComparation.variable1.state)|upper -}}
+		,{{- otherComparation.otherComparation.variable1.state|clearSpace|upper -}}
 	{%- endfor -%}
 	):-
-	{{-clearSpace(rule.comparations.comparation.variable1.state)|upper-}}{{-gologOperator(rule.comparations.comparation.operator)-}}{{-clearSpace(rule.comparations.comparation.variable2)-}}
+	{{-rule.comparations.comparation.variable1.state|clearSpace|upper-}}{{-rule.comparations.comparation.operator|gologOperator-}}{{-rule.comparations.comparation.variable2|clearSpace-}}
 	{%- for otherComparation in rule.comparations.otherComparation -%}
-		{{gologOperator(otherComparation.logicalOperator)}}{{- clearSpace(otherComparation.otherComparation.variable1.state)|upper }}{{gologOperator(otherComparation.otherComparation.operator)}}{{otherComparation.otherComparation.variable2-}}
+		{{otherComparation.logicalOperator|gologOperator}}{{- otherComparation.otherComparation.variable1.state|clearSpace|upper }}{{otherComparation.otherComparation.operator|gologOperator}}{{otherComparation.otherComparation.variable2-}}
 	{%- endfor -%}
-	,A={{clearSpace(rule.conclusion)}}.
+	,A={{rule.conclusion|clearSpace}}.
+{% endfor %}
+
+#Template for all
+{% for ruleLine in dominio.ruleLines%}
+	{% if ruleLine|is_rule%}
+		{% set rule=ruleLine.rule %}
+		{{- rule.variable.state|clearSpace -}}(A,
+		{{- rule.comparations.comparation.variable1.state|clearSpace|upper -}}
+		{%- for otherComparation in rule.comparations.otherComparation -%}
+			,{{- otherComparation.otherComparation.variable1.state|clearSpace|upper -}}
+		{%- endfor -%}
+		):-
+		{{-rule.comparations.comparation.variable1.state|clearSpace|upper-}}{{-rule.comparations.comparation.operator|gologOperator-}}{{-rule.comparations.comparation.variable2|clearSpace-}}
+		{%- for otherComparation in rule.comparations.otherComparation -%}
+			{{otherComparation.logicalOperator|gologOperator}}{{- otherComparation.otherComparation.variable1.state|clearSpace|upper }}{{otherComparation.otherComparation.operator|gologOperator}}{{otherComparation.otherComparation.variable2-}}
+		{%- endfor -%}
+		,A={{rule.conclusion|clearSpace}}.
+	{% elif ruleLine|is_predicate %}
+		{% set predicate = ruleLine.predicate %}
+		{{- predicate.variable.state|clearSpace-}}
+		({%- for fact in predicate.facts -%}
+			{{fact.state|clearSpace}},
+		{%- endfor %} 
+		{{-predicate.finalFact.state|clearSpace}}).
+	{% endif %}
 {% endfor %}
 

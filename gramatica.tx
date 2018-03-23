@@ -1,7 +1,10 @@
 Domain:
 	article=Article domain+=STRING 'define que'
-		predicates*=Predicate
-		rules*=Rule
+		ruleLines += RuleLine
+;
+
+RuleLine:
+	rule=Rule | predicate=Predicate
 ;
 
 Keywords:
@@ -53,6 +56,7 @@ Comparations:
 ;
 
 Rule:
-	 ('si' comparations=Comparations 'entonces' variable=Variable 'es' conclusion=State) | (variable=Variable 'es' conclusion=State 'si' comparations=Comparations)
+	'si' comparations=Comparations 'entonces' variable=Variable 'es' conclusion=State 
 ;
+
 

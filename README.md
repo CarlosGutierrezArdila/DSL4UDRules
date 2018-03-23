@@ -19,4 +19,8 @@ convert dot to png
 
 to test install go
 
+que se agreguen reglas y hechos en desorden
+resultado a un archivo
+agregar hechos a reglas
+
 
