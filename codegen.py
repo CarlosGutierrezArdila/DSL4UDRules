@@ -1,13 +1,14 @@
 from os.path import exists, dirname, join
 from textx.metamodel import metamodel_from_file
+import sys
 import jinja2
 
 def main(entity):
-    print(entity)
+    
     this_folder = dirname(__file__)
 
     dsl_mm = metamodel_from_file('gramatica.tx')
-    dsl_model = dsl_mm.model_from_file('entidad.ent')	
+    dsl_model = dsl_mm.model_from_file(entity)	
 
     def clearSpace(chain):
     	return str(chain).replace(' ','')
@@ -57,12 +58,12 @@ def main(entity):
 
     print("ok")
 
-if __name __ == "__main__":
+if __name__ == "__main__":
     entity = None
     if len(sys.argv) > 1:
-        print "ejecutando ..."
+        print("Rule Generator...")
         entity = sys.argv[1]
         main(entity)
     else:
-        print "Debe ingresar el nombre de la entidad con la cual quiere generar el codigo"
-        exit(1)main()
+        print("Entity file not found in arguments")
+        exit(1)
