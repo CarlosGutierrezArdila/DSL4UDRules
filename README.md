@@ -5,7 +5,6 @@ install textx and jinja2 with pip as su:
 	- sudo pip install textx
 	- sudo pip install Jinja2
 
-
 install graphviz for dot and xdot visualizer
 
 to check the meta-model or meta-model model:
@@ -17,10 +16,14 @@ to check and visualize (generate dot file) the meta-model or meta-model model:
 convert dot to png
     - dot -Tpng dotfile.dot -o outputfile.png
 
-to test install go
+to generate output file and check model:
+	- python codegen.py (Entitiy file ubication).ent
+The output file is generated in rules dir with the domain's name, it contains the rules rendered with the template.
+
+to test install go and execute:
+	- go run proofRule.go
 
 
-resultado a un archivo
 agregar hechos a reglas
 
 
