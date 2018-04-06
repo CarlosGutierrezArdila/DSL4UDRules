@@ -53,7 +53,7 @@ Comparations:
 
 Rule:
 	'si' 
-	(comparations=Comparations 	| 'se cumple' Article? hecho=[Predicate|State])
+	(comparations=Comparations 	| 'se cumple' ' con'? Article? hecho=[Predicate|State])
 	'entonces' Article? name=State 'es' conclusion=State
 ;
 
