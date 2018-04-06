@@ -15,24 +15,20 @@ Article:
 	'el'|'la'|'un'|'una'
 ;
 
-Variable:
-	article=Article state=State
-;
-
 Predicate:
-	variable=Variable facts*=Fact finalFact=FinalFact
+	Article? name=State facts*=Fact finalFact=FinalFact
 ;
 
 Fact:
-	('para'|'en') state=State
+	('para'|'en') Article? name=State
 ;
 
 FinalFact:
-	'es' state=State
+	'es' name=State
 ;
 
 State:
-	/[0-9]+.[0-9]+/ | INT| STRING | /[a-zA-z]+/ |ID
+	/[0-9]+.[0-9]+/ | INT | STRING | ID
 ;
 
 Operators:
@@ -40,7 +36,7 @@ Operators:
 ;
 
 Comparation:
-	variable1=Variable 'es' operator=Operators variable2=State
+	Article? variable1=State 'es' operator=Operators Article? variable2=State
 ;
 
 LogicalOperators:
@@ -56,7 +52,9 @@ Comparations:
 ;
 
 Rule:
-	'si' comparations=Comparations 'entonces' variable=Variable 'es' conclusion=State 
+	'si' 
+	(comparations=Comparations 	| 'se cumple' Article? hecho=[Predicate|State])
+	'entonces' Article? name=State 'es' conclusion=State
 ;
 
 

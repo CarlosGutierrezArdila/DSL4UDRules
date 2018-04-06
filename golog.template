@@ -1,23 +1,23 @@
 # Template for facts
 {%for predicate in dominio.predicates%}
-	{{- predicate.variable.state|clearSpace-}}
+	{{- predicate.name|clearSpace-}}
 	({%- for fact in predicate.facts -%}
-		{{fact.state|clearSpace}},
+		{{fact.name|clearSpace}},
 	{%- endfor %} 
-	{{-predicate.finalFact.state|clearSpace}}).
+	{{-predicate.finalFact.name|clearSpace}}).
 {% endfor %}
 
 #Template for rules
 {% for rule in dominio.rules %}
-	{{- rule.variable.state|clearSpace -}}(A,
-	{{- rule.comparations.comparation.variable1.state|clearSpace|upper -}}
+	{{- rule.name|clearSpace -}}(A,
+	{{- rule.comparations.comparation.variable1|clearSpace|upper -}}
 	{%- for otherComparation in rule.comparations.otherComparation -%}
-		,{{- otherComparation.otherComparation.variable1.state|clearSpace|upper -}}
+		,{{- otherComparation.otherComparation.variable1|clearSpace|upper -}}
 	{%- endfor -%}
 	):-
-	{{-rule.comparations.comparation.variable1.state|clearSpace|upper-}}{{-rule.comparations.comparation.operator|gologOperator-}}{{-rule.comparations.comparation.variable2|clearSpace-}}
+	{{-rule.comparations.comparation.variable1|clearSpace|upper-}}{{-rule.comparations.comparation.operator|gologOperator-}}{{-rule.comparations.comparation.variable2|clearSpace-}}
 	{%- for otherComparation in rule.comparations.otherComparation -%}
-		{{otherComparation.logicalOperator|gologOperator}}{{- otherComparation.otherComparation.variable1.state|clearSpace|upper }}{{otherComparation.otherComparation.operator|gologOperator}}{{otherComparation.otherComparation.variable2-}}
+		{{otherComparation.logicalOperator|gologOperator}}{{- otherComparation.otherComparation.variable1|clearSpace|upper }}{{otherComparation.otherComparation.operator|gologOperator}}{{otherComparation.otherComparation.variable2-}}
 	{%- endfor -%}
 	,A={{rule.conclusion|clearSpace}}.
 {% endfor %}
@@ -26,24 +26,24 @@
 {% for ruleLine in dominio.ruleLines%}
 	{% if ruleLine|is_rule%}
 		{% set rule=ruleLine.rule %}
-		{{- rule.variable.state|clearSpace -}}(A,
-		{{- rule.comparations.comparation.variable1.state|clearSpace|upper -}}
+		{{- rule.name|clearSpace -}}(A,
+		{{- rule.comparations.comparation.variable1|clearSpace|upper -}}
 		{%- for otherComparation in rule.comparations.otherComparation -%}
-			,{{- otherComparation.otherComparation.variable1.state|clearSpace|upper -}}
+			,{{- otherComparation.otherComparation.variable1|clearSpace|upper -}}
 		{%- endfor -%}
 		):-
-		{{-rule.comparations.comparation.variable1.state|clearSpace|upper-}}{{-rule.comparations.comparation.operator|gologOperator-}}{{-rule.comparations.comparation.variable2|clearSpace-}}
+		{{-rule.comparations.comparation.variable1|clearSpace|upper-}}{{-rule.comparations.comparation.operator|gologOperator-}}{{-rule.comparations.comparation.variable2|clearSpace-}}
 		{%- for otherComparation in rule.comparations.otherComparation -%}
-			{{otherComparation.logicalOperator|gologOperator}}{{- otherComparation.otherComparation.variable1.state|clearSpace|upper }}{{otherComparation.otherComparation.operator|gologOperator}}{{otherComparation.otherComparation.variable2-}}
+			{{otherComparation.logicalOperator|gologOperator}}{{- otherComparation.otherComparation.variable1|clearSpace|upper }}{{otherComparation.otherComparation.operator|gologOperator}}{{otherComparation.otherComparation.variable2-}}
 		{%- endfor -%}
 		,A={{rule.conclusion|clearSpace}}.
 	{% elif ruleLine|is_predicate %}
 		{% set predicate = ruleLine.predicate %}
-		{{- predicate.variable.state|clearSpace-}}
+		{{- predicate.name|clearSpace-}}
 		({%- for fact in predicate.facts -%}
-			{{fact.state|clearSpace}},
+			{{fact.name|clearSpace}},
 		{%- endfor %} 
-		{{-predicate.finalFact.state|clearSpace}}).
+		{{-predicate.finalFact.name|clearSpace}}).
 	{% endif %}
 {% endfor %}
 
