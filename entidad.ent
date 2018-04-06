@@ -5,6 +5,6 @@ si el promedio es igual a 5 entonces el estudiante es excelente
 si nota es mayor o igual a 3 entonces la materia es aprobada
 si la nota es menor o igual a 3 entonces la materia es reprobada
 si el 'numero materias perdidas' es mayor o igual a 3 entonces el estado es 'prueba academica'
-si se cumple promedio entonces la materia es aprobada
+si se cumple el promedio entonces la materia es aprobada
 
 
