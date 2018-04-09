@@ -22,8 +22,7 @@ The output file is generated in rules dir with the domain's name, it contains th
 
 to test install go and execute:
 	- go run proofRule.go
-
-
-agregar hechos a reglas
+	
+referencia hechos completos
 
 

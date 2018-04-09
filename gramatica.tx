@@ -35,8 +35,12 @@ Operators:
 	'mayor a'|'menor a'|'mayor o igual a'|'menor o igual a'|'igual a'|'diferente a'
 ;
 
+Negation:
+	'no'
+;
+
 Comparation:
-	(Article? variable1=State 'es' operator=Operators Article? variable2=State) | ('se cumple' ' con'? Article? ruleorfact=[RuleOrFact|State])
+	(Article? variable1=State negation=Negation? 'es' operator=Operators Article? variable2=State) | (negation=Negation? 'se cumple' ' con'? Article? ruleorfact=[RuleOrFact|State])
 ;
 
 RuleOrFact:
@@ -48,7 +52,7 @@ LogicalOperators:
 ;
 
 OtherComparation:
-	logicalOperator=LogicalOperators otherComparation=Comparation
+	logicalOperator=LogicalOperators comparation=Comparation
 ;
 
 Comparations:

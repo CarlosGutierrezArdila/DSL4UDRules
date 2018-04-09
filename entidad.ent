@@ -1,5 +1,5 @@
 el 'articulo 38' define que 	
 el 'promedio minimo' para 'quedar en prueba' es 3.2
 el 'numero de materias' para 'quedar en prueba' es 3
-si se cumple con el 'promedio minimo' o se cumple con el 'numero de materias' o el 'numero de veces que repite' es igual a 3 entonces el 'estado del estudiante' es 'prueba academica'
-si se cumple con el 'estado del estudiante' y el 'numero de pruebas anteriores' es igual a 1 entonces el 'estado del estudiante' es expulsado
+si se cumple con el 'promedio minimo' o se cumple con el 'numero de materias' o el 'numero de veces que repite' no es igual a 3 entonces el 'estado del estudiante' es 'prueba academica'
+si no se cumple con el 'estado del estudiante' y el 'numero de pruebas anteriores' es igual a 1 entonces el 'estado del estudiante' es expulsado

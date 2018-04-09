@@ -14,7 +14,7 @@ func main(){
 			estado(A,NUMEROMATERIASPERDIDAS):-NUMEROMATERIASPERDIDAS@>=3,A=pruebaacademica.
 		`)
 	//fmt.Println(m.CanProve(`posiblemodalidaddegrado(A,1000,1000).`))
-	solutions2 := m.ProveAll(`estado(A,2).`)
+	solutions2 := m.ProveAll(`estado(A,4).`)
 	for _, solution2 := range solutions2 {
 		fmt.Println(solution2.ByName_("A"))
 	}
