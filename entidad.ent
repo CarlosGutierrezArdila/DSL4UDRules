@@ -1,10 +1,5 @@
 el 'articulo 38' define que 	
-el promedio para aprobar es 3
-la nota para aprobarmateria en la universidaddistrital es 3.2
-si el promedio es igual a 5 entonces el estudiante es excelente
-si nota es mayor o igual a 3 entonces la materia es aprobada
-si la nota es menor o igual a 3 entonces la materia es reprobada
-si el 'numero materias perdidas' es mayor o igual a 3 entonces el estado es 'prueba academica'
-si se cumple con el promedio entonces la materia es aprobada
-
-
+el 'promedio minimo' para 'quedar en prueba' es 3.2
+el 'numero de materias' para 'quedar en prueba' es 3
+si se cumple con el 'promedio minimo' o se cumple con el 'numero de materias' o el 'numero de veces que repite' es igual a 3 entonces el 'estado del estudiante' es 'prueba academica'
+si se cumple con el 'estado del estudiante' y el 'numero de pruebas anteriores' es igual a 1 entonces el 'estado del estudiante' es expulsado

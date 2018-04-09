@@ -36,7 +36,11 @@ Operators:
 ;
 
 Comparation:
-	Article? variable1=State 'es' operator=Operators Article? variable2=State
+	(Article? variable1=State 'es' operator=Operators Article? variable2=State) | ('se cumple' ' con'? Article? ruleorfact=[RuleOrFact|State])
+;
+
+RuleOrFact:
+	Predicate | Rule
 ;
 
 LogicalOperators:
@@ -52,9 +56,7 @@ Comparations:
 ;
 
 Rule:
-	'si' 
-	(comparations=Comparations 	| 'se cumple' ' con'? Article? hecho=[Predicate|State])
-	'entonces' Article? name=State 'es' conclusion=State
+	'si' comparations=Comparations 	'entonces' Article? name=State 'es' conclusion=State
 ;
 
 
