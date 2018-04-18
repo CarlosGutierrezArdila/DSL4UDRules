@@ -40,11 +40,20 @@ Negation:
 ;
 
 Comparation:
-	(Article? variable1=State negation=Negation? 'es' operator=Operators Article? variable2=State) | (negation=Negation? 'se cumple' ' con'? Article? ruleorfact=[RuleOrFact|State])
+	(Article? variable1=State negation=Negation? 'es' operator=Operators Article? variable2=State) | (negation=Negation? 'se cumple que' Article? referencedruleorfact=
+	ReferencedRuleOrFact )
 ;
 
-RuleOrFact:
-	Predicate | Rule
+ReferencedRuleOrFact:
+	ReferencedRule | ReferencedFact	
+;
+
+ReferencedRule:
+	rule=[Rule|State] 'es' conclusion=State
+;
+
+ReferencedFact:
+	predicate=[Predicate|State] facts+=Fact 
 ;
 
 LogicalOperators:
